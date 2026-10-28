@@ -522,7 +522,7 @@ footer.pie small{opacity:.85}
     var t;
     if(!sel.base.length&&!sel.comp.length&&!sel.salsa.length){resumen.textContent='Toca arriba lo que te apetece y aquí aparece tu bocata.';t='Hola, quería hacer un pedido en Casa Alós.'}
     else{
-      t='Un bocata'+(sel.base.length?' de '+sel.base[0].toLowerCase():'')+(sel.comp.length?' con '+lista(sel.comp.map(function(s){return s.toLowerCase()})):'')+(sel.salsa.length?(sel.comp.length?', y':' con')+' salsa '+lista(sel.salsa.map(function(s){return s.toLowerCase()})):'')+'.';
+      t='Un bocata'+(sel.base.length?' de '+sel.base[0].toLowerCase():'')+(sel.comp.length?' con '+lista(sel.comp.map(function(s){return s.toLowerCase()})):'')+(sel.salsa.length?(sel.comp.length?' y':' con')+' salsa '+lista(sel.salsa.map(function(s){return s.toLowerCase()})):'')+'.';
       resumen.textContent=t;t='Hola, quería pedir: '+t.toLowerCase().replace(/^un/,'un');
     }
     wa.href='https://wa.me/34961740842?text='+encodeURIComponent(t);
